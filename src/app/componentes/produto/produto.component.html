@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="nome" class="form-label">Nome</label>
+        <input
+          type="text"
+          placeholder="Nome"
+          class="form-control"
+          #nome="ngModel"
+          [(ngModel)]="produto.nome"
+          name="nome"
+          id="nome"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="quantidade" class="form-label">Quantidade</label>
+        <input
+          type="text"
+          placeholder="Quantidade"
+          class="form-control"
+          #quantidade="ngModel"
+          [(ngModel)]="produto.quantidade"
+          name="quantidade"
+          id="quantidade"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="valor" class="form-label">Valor</label>
+        <input
+          type="text"
+          placeholder="Valor"
+          class="form-control"
+          #valor="ngModel"
+          [(ngModel)]="produto.valor"
+          name="valor"
+          id="valor"
+          required
+        />
+      </div>
+
+      <div class="button-group">
+        <button class="btn btn-success" (click)="save(produto)" *ngIf="!exibirBotao">Salvar</button>
+        <button class="btn btn-primary" (click)="update(produto)" *ngIf="exibirBotao">Atualizar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="table-container">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produtos">
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.quantidade }}</td>
+            <td>{{ produto.valor }}</td>
+            <td class="button-cell">
+              <button class="btn btn-warning" (click)="atualizar(produto)">Atualizar</button>
+              <button class="btn btn-danger" (click)="delete(produto)">Deletar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

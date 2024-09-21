@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding-top: 80px;
+}
+
+
+.form-container {
+  width: 300px;
+  margin-right: 20px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  z-index: 100;
+}
+
+
+form {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: beige;
+  --main-color: black;
+  padding: 20px;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.form-label {
+  color: var(--font-color);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+
+.form-control {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.form-control:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.btn {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  gap: 30px;
+}
+
+
+.table-container {
+  width: 700px;
+  margin-left: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo dos botões da tabela */
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+.button-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
